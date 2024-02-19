@@ -1,0 +1,181 @@
+/* -----
+    Initialize
+----- */
+
+:root {
+  /* Colors */
+
+  --rich-black-fogra-29: hsl(210, 26%, 7%);
+  --champagne-pink_20: hsla(23, 61%, 86%, 0.2);
+  --independence_30: hsla(245, 17%, 29%, 0.3);
+  --gray-x-11-gray: hsl(0, 0%, 73%);
+  --champagne-pink: hsl(23, 61%, 86%);
+  --spanish-gray: hsl(0, 0%, 60%);
+  --sonic-silver: hsl(0, 0%, 47%);
+  --deep-saffron: hsl(32, 100%, 59%);
+  --dark-orange: hsl(28, 100%, 58%);
+  --desert-sand: hsl(23, 49%, 82%);
+  --isabelline: hsl(38, 44%, 96%);
+  --gainsboro: hsl(0, 0%, 87%);
+  --tangerine: hsl(31, 84%, 50%);
+  --cinnabar: hsl(3, 90%, 55%);
+  --black_95: hsla(0, 0%, 0%, 0.95);
+  --cultured: hsl(0, 0%, 93%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --onyx: hsl(0, 0%, 27%);
+
+  /* Typography */
+
+  --ff-shadows-into-light: "Shadows Into Light", cursive;
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-rubik: "Rubik", sans-serif;
+
+  --fs-1: 3.2rem;
+  --fs-2: 2.2rem;
+  --fs-3: 1.8rem;
+  --fs-4: 1.4rem;
+  --fs-5: 1.2rem;
+
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* Spacing */
+  --section-padding: 60px;
+
+  /* Shadow */
+  --shadow-1: 0 1px 4px hsla(0, 0%, 0%, 0.2);
+  --shadow-2: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+
+  /* Transition */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+
+  /* Clip path */
+  --clip-path-1: polygon(0 40%, 100% 0%, 100% 100%, 0 100%);
+  --clip-path-2: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--ff-roboto);
+}
+
+button {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* -----
+    Header
+----- */
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  border-block-end: 1px solid var(--champagne-pink_20);
+}
+
+nav > .container {
+  padding: 10px 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--ff-rubik);
+}
+
+.logo > a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.logo > a > span {
+  color: var(--deep-saffron);
+}
+
+.nav-btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.line-top,
+.line-middle,
+.line-bottom {
+  display: block;
+  background-color: var(--white);
+  margin: 5px;
+  border-radius: 10px;
+  transition: var(--transition-1);
+}
+
+.line-top {
+  width: 10px;
+  height: 3px;
+}
+
+.line-middle {
+  width: 20px;
+  height: 3px;
+}
+
+.line-bottom {
+  width: 10px;
+  height: 3px;
+  transform: translateX(10px);
+}
+
+.line-top.active {
+  transform: rotate(45deg) translate(3.5px, 2px);
+}
+
+.line-middle.active {
+  transform: rotate(-45deg);
+}
+
+.line-bottom.active {
+  transform: rotate(45deg) translate(3.3px, -9px);
+}
+
+.search-icon {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin: auto;
+  cursor: pointer;
+}
+
+.reservation-btn {
+  background-color: var(--deep-saffron);
+  padding: 10px 20px;
+  border-radius: --;
+  color: var(--white);
+  font-weight: var(--fw-700);
+  display: none;
+}
+
+.nav-links {
+  display: none;
+  background-color: red;
+}
+
+/* -----
+    Hero
+----- */
+
+.hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
