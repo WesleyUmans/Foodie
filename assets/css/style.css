@@ -87,24 +87,13 @@ nav {
   height: 90px;
   border-block-end: 1px solid var(--champagne-pink_20);
   z-index: 5;
+  --color: var(--white);
+  --btn-color: var(--white);
 }
 
-nav.fixed-top {
-  position: fixed;
-  background-color: var(--white);
-  top: -91px;
-  width: 100%;
-  animation: slideIn 0.5s ease-out forwards;
-  box-shadow: var(--shadow-2);
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
+nav.change-color {
+  --color: var(--black);
+  --btn-color: var(--black);
 }
 
 nav > .container {
@@ -122,9 +111,10 @@ nav > .container {
   letter-spacing: -0.1ch;
 }
 
-.logo > a {
+.logo-a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--color);
+  font-size: var(--fs-3);
 }
 
 .logo > a > span {
@@ -140,7 +130,7 @@ nav > .container {
 .line-middle,
 .line-bottom {
   display: block;
-  background-color: var(--white);
+  background-color: var(--btn-color);
   margin: 5px;
   border-radius: 10px;
   transition: var(--transition-1);
@@ -175,7 +165,7 @@ nav > .container {
 }
 
 .search-icon {
-  color: var(--white);
+  color: var(--color);
   font-size: 1.5rem;
   margin: auto;
   cursor: pointer;
@@ -203,6 +193,7 @@ nav > .container {
   overflow: hidden;
   transition: var(--transition-1);
   z-index: 2;
+  box-shadow: var(--shadow-1);
 }
 
 .navbar-mobile.active {
@@ -241,6 +232,24 @@ nav > .container {
 .nav-hr {
   width: 100%;
   border: 1px solid var(--champagne-pink_20);
+}
+
+nav.fixed-top {
+  position: fixed;
+  background-color: var(--white);
+  top: -91px;
+  width: 100%;
+  animation: slideIn 0.5s ease-out forwards;
+  box-shadow: var(--shadow-2);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 /* -----
