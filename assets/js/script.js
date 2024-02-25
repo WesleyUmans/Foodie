@@ -24,3 +24,12 @@ const handleMenuClick = () => {
 };
 
 menuBtn.addEventListener("click", () => handleMenuClick());
+
+document.addEventListener("scroll", function () {
+  const navbar = document.querySelector("[data-navbar]");
+  const navbarHeight = 90;
+  const distanceFromTop = Math.abs(document.body.getBoundingClientRect().top);
+
+  if (distanceFromTop >= navbarHeight) navbar.classList.add("fixed-top");
+  else navbar.classList.remove("fixed-top");
+});

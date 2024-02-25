@@ -70,6 +70,11 @@ button {
   margin: 0px;
 }
 
+.container {
+  width: 90vw;
+  margin: auto;
+}
+
 /* -----
     Header
 ----- */
@@ -81,6 +86,25 @@ nav {
   width: 100%;
   height: 90px;
   border-block-end: 1px solid var(--champagne-pink_20);
+  z-index: 5;
+}
+
+nav.fixed-top {
+  position: fixed;
+  background-color: var(--white);
+  top: -91px;
+  width: 100%;
+  animation: slideIn 0.5s ease-out forwards;
+  box-shadow: var(--shadow-2);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 nav > .container {
@@ -275,17 +299,12 @@ nav > .container {
 }
 
 /* -----
-    Meals slider
+    Promo
 ----- */
 
 .promo {
   background-color: var(--isabelline);
   padding-top: 60px;
-}
-
-.promo > .container {
-  width: 90vw;
-  margin: auto;
 }
 
 .meals-slider {
@@ -394,4 +413,109 @@ svg,
   height: 15px;
   width: 100%;
   z-index: 1;
+}
+
+/* -----
+    About
+----- */
+
+.about {
+  text-align: center;
+  margin-block-start: 60px;
+}
+
+.discount-image {
+  position: relative;
+}
+
+.about-meal-img {
+  max-width: 100%;
+}
+
+.about-discount-img {
+  position: absolute;
+  width: 225px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 1s linear infinite alternate;
+  top: 0;
+}
+
+@keyframes bounce {
+  0% {
+    width: 225px;
+  }
+  100% {
+    width: 220px;
+  }
+}
+
+.about-info {
+  margin-block-start: 40px;
+}
+
+.about-info > h1 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-600);
+  margin-block-end: 0px;
+}
+
+.about-info > h1 > span {
+  color: var(--deep-saffron);
+}
+
+.about-info > p {
+  color: var(--sonic-silver);
+  line-height: 2.5ch;
+}
+
+.about-ul {
+  list-style: none;
+  padding: 0;
+  margin-inline: auto;
+}
+
+.about-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-block: 5px;
+  font-weight: var(--fw-500);
+}
+
+.about-li > ion-icon {
+  border-radius: 50%;
+  padding: 3px;
+  color: var(--white);
+  font-size: 0.9em;
+
+  background-color: var(--deep-saffron);
+  --ionicon-stroke-width: 70px;
+}
+
+.about-button {
+  background-color: var(--deep-saffron);
+  color: var(--white);
+  font-weight: var(--fw-600);
+  padding: 15px 30px;
+  margin-block: 10px 40px;
+}
+
+/* -----
+    Menu
+----- */
+
+.menu-start-shape {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 15px;
+  width: 100%;
+  z-index: 1;
+  transform: rotate(180deg);
+}
+
+.menu {
+  background-color: var(--isabelline);
 }
