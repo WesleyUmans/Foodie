@@ -62,6 +62,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: var(--ff-roboto);
+  width: 100%;
 }
 
 button {
@@ -71,7 +72,7 @@ button {
 }
 
 .container {
-  width: 90vw;
+  max-width: 90vw;
   margin: auto;
 }
 
@@ -515,6 +516,11 @@ svg,
     Menu
 ----- */
 
+.menu {
+  background-color: var(--isabelline);
+  text-align: center;
+}
+
 .menu-start-shape {
   background-size: cover;
   background-repeat: no-repeat;
@@ -525,6 +531,117 @@ svg,
   transform: rotate(180deg);
 }
 
-.menu {
-  background-color: var(--isabelline);
+.menu-info {
+  margin-block-start: 60px;
+}
+
+.menu-info > p:nth-child(1) {
+  color: var(--cinnabar);
+  font-weight: var(--fw-500);
+}
+
+.menu-info > h3 {
+  font-size: var(--fs-3);
+  margin-block: 0px 20px;
+}
+
+.menu-info > h3 > span {
+  color: var(--deep-saffron);
+}
+
+.menu-info > p:nth-child(3) {
+  color: var(--sonic-silver);
+  margin-block-start: 0px;
+}
+
+.menu-categories {
+  margin-block: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.categorie-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: var(--fw-600);
+  background-color: var(--white);
+  border: 1px solid var(--border-color, var(--cultured));
+}
+
+.categorie-btn.active {
+  color: var(--white);
+  background-color: var(--deep-saffron);
+  border: 1px solid --deep-saffron;
+}
+
+.menu-dishes {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+.dish-card {
+  background-color: var(--white);
+  padding: 20px 40px;
+  box-shadow: var(--shadow-2);
+}
+
+.dish-discount {
+  position: relative;
+  margin-block-start: 20px;
+}
+
+.dish-discount > p {
+  margin: 0px;
+  background-color: var(--cinnabar);
+  position: absolute;
+  top: 0;
+  color: var(--white);
+  font-weight: var(--fw-600);
+  font-size: 0.8rem;
+  padding: 4px 12px;
+}
+
+.dish-discount > img {
+  margin-block-start: 30px;
+}
+
+.categorie-ranking {
+  margin-block-start: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.categorie-ranking > p {
+  color: var(--sonic-silver);
+  font-weight: 600;
+}
+
+.rating {
+  color: var(--deep-saffron);
+  transform: translateY(1px);
+}
+
+.dish-card > h5 {
+  font-size: var(--fs-4);
+  letter-spacing: -0.5px;
+  margin: 0px;
+}
+
+.dish-pricing {
+  font-weight: var(--fw-600);
+  color: var(--cinnabar);
+}
+
+.dish-discount-price {
+  color: var(--deep-saffron);
+  margin-inline-start: 5px;
+}
+
+.dish-price {
+  color: var(--gray-x-11-gray);
 }
