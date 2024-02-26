@@ -76,6 +76,10 @@ button {
   margin: auto;
 }
 
+.accent {
+  color: var(--deep-saffron);
+}
+
 /* -----
     Header
 ----- */
@@ -519,6 +523,7 @@ svg,
 .menu {
   background-color: var(--isabelline);
   text-align: center;
+  padding-block-end: 60px;
 }
 
 .menu-start-shape {
@@ -644,4 +649,60 @@ svg,
 
 .dish-price {
   color: var(--gray-x-11-gray);
+}
+
+/* -----
+    CTA
+----- */
+
+.cta {
+  color: var(--white);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  padding-block-end: 40px;
+}
+
+.cta-content {
+  margin-block-start: 60px;
+}
+
+.cta-content > h1 {
+  font-size: var(--fs-3);
+}
+
+.cta-content > p {
+  margin-block-start: 40px;
+  color: var(--gainsboro);
+  line-height: 2.7ch;
+}
+
+.cta-content > button {
+  margin-block-start: 10px;
+  background-color: var(--deep-saffron);
+  color: var(--white);
+  padding: 15px 35px;
+  font-weight: var(--fw-600);
+}
+
+.cta-img {
+  position: relative;
+}
+
+.cta-burger {
+  width: 100%;
+  transform: scale(1.3) translateY(50px);
+  z-index: 1;
+}
+
+.cta-discount {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 200px;
+  z-index: 2;
+  animation: bounce 1s linear infinite alternate;
 }
